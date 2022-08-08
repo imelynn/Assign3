@@ -4,53 +4,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Form Template</title>
+  </head>
 </head>
 <body>
-<form>
-  <tr>
-<td align = "right">Name:</td>
-<input type="text" id="name" name="name" value="" required><br><br>
-<td align = "right">Email:</td>
-<input type="text" id="name" name="email" value="" required><br><br>
-<td align = "right">Date:</td>
-<input type="date" id="date" name="date" value="" required><br><br>
-<td align = "right">Pronouns:</td>
-<label>She/Her</label>
-<input type="checkbox" id="female" name="check" value="" checked required>
-<label>He/Him</label>
-<input type="checkbox" id="male" name="check" value="">
-<label>They/Them</label>
-<input type="checkbox" id="other" name="check" value=""><br><br>
-<td  align = "right">Select Country: </td>       
-<select required>  
-<option id="usa" name="usa" value = "USA"> USA</option>  
-<option id="uk" name="uk" value = "UK"> UK </option>  
-<option id="china" name="china" value = "China"> China </option>  
-<option id="greece" name="greece" value = "Greece"> Greece </option>  
-</select> <br><br> 
-<td align = "right">Time Zone:</td>
-<input type="radio" id="est" name="timezone"  value="EST" required>
-<label for="est">EST <span class="custom-radio-button"></span></label>
-<input type="radio" id="cst" name="timezone" value="CST">
-<label for="cst">CST <span class="custom-radio-button"></span></label>
-<input type="radio" id="pst" name="timezone" value="PST">
-<label for="pst">PST <span class="custom-radio-button"></span></label><br><br>
-<td align = "right">Brief Description of Inquiry:</td>
-<textarea title="inquiry" id="txtTextarea" name="inquiry" rows="4" cols="50" required placeholder="Thank you for your inqiry."></textarea>
-<td align = "right"></td>
-<button type="submit" id="send" name="send">Submit</button>
-<!--<input type="button" value="Submit" name="submit" id="submit" onClick="display()"/>-->
-<br><br><br>
-  </tr>
-</form>
-<table width="400px" align="center" border=0> 
-
-<tr style="background-color:#8FBC8F;">
-<td align="center"><b>Submitted Form Data</b></td>
-</tr>
-<tr>
-<td align="center"><div id="displayarea" style="background-color:#8FBC8F;"></div></td>
-</tr>
-</table>
+    <form id="myform" action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="" required><br><br>
+        <!--Email Required-->
+        <label for="email">*Email:</label>
+        <input type="email" id="email" name="email" value="" required><br><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" value=""><br><br>
+        <label for="date">Country:</label>
+        <select type="select" id="country" name="country">  
+        <option value = "USA"> USA</option>  
+        <option value = "UK"> UK </option>  
+        <option value = "China"> China </option>  
+        <option value = "Greece"> Greece </option>  
+        </select><br><br>
+        <!--Radio Button Timezone-->
+        <label for="radiobtn" id="timezone" name="timezone">Timezone:</label>
+        <input type="radio" id="est" name="timezone">
+        <label for="est">EST<span class="radiobtn"></span></label>
+        <input type="radio" id="cst" name="timezone">
+        <label for="cst">CST <span class="radiobtn"></span></label>
+        <input type="radio" id="pst" name="timezone">
+        <label for="pst">PST <span class="radiobtn"></span></label><br><br>
+        </div>
+        <!--Large Area Text // Required-->
+        <label for="comment">*Enter Comment</label><br>
+        <textarea type="text" id="comment" name="comment" value="" cols="50" rows="4" required></textarea>
+         <!--Agreement Checkbox Required-->
+        <div class=checkbox.group required>
+        <imput type="checkbox" for="agreement" id=agreement name="agreement">*I agree to this form submission:</label><br><br>
+        <label id="checkbox1" class="checkbox">Yes<input type="checkbox"></label>
+        <label id="checkbox2" class="checkbox">No<input type="checkbox"></label>
+        </div>
+        <h5>*Fields required.</h5>
+        <button>Submit</button><br><br>
+        </form>
+        
+        <div id="output">
+        <p><span id="display_name"></p></span>
+        <p><span id="display_email"></p></span>
+        <p><span id="display_date"></p></span>
+        <p><span id="display_country"></p></span>
+        <p><span id="display_timezone"></p></span>
+        <p><span id="display_comment"></p></span>
+        <p><span id="display_agreement"></p></span>
+        </div>
+        
+ <script src="login_form.js"></script>
 </body>
 </html>
