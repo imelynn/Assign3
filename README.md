@@ -1,5 +1,4 @@
 # Form-Input
-Cohort Assignment 3
 
 In this assignment, you’re going to build a mock contact form. Contact forms are a common interaction pattern and are a great way to practice your form making skills, as they usually include a variety of input fields, some of which are needed to submit, some of which aren’t. In this contact form, you’ll also include fields that are common in other types of forms, like checkboxes which are often used to agree to sign up for things, select boxes which are often used to choose one of many options (like reason for contacting, or categories), and radio buttons, which are used to choose one of a number of different options (similar to a select box, but often used when the differences require more explanation).
 
